@@ -88,28 +88,28 @@
         <div data-role="content">
             <form id="frmUserForm" action="">
                 <div data-role="fieldcontain">
-                    <label for="txtPlantName">Plant Name: </label>
-                    <input type="text" placeholder="Plant Name" name="txtPlantName" data-mini="false" id="txtPlantName" value="" required>
+                    <label for="txtFirstName">Plant Name: </label>
+                    <input type="text" placeholder="Plant Name" name="txtFirstName" data-mini="false" id="txtFirstName" value="" required>
                 </div>
                 <div data-role="fieldcontain">
-                    <label for="txtPlantID">Plant ID: </label>
-                    <input type="text" placeholder="Plant ID" name="txtPlantID" data-mini="false" id="txtPlantID" value="" required>
+                    <label for="txtLastName">Plant ID: </label>
+                    <input type="text" placeholder="Plant ID" name="txtLastName" data-mini="false" id="txtLastName" value="" required>
                 </div>
 
-                <!--Changed "datBirthdate" to "dateInstallation-->
+                
                 <div data-role="fieldcontain">
-                    <label for="dateInstallation">Date Installation: </label>
-                    <input type="date" name="dateInstallation" data-mini="false" id="dateInstallation" value="" required>
+                    <label for="datBirthdate">Installation Date: </label>
+                    <input type="date" name="datBirthdate" data-mini="false" id="datBirthdate" value="" required>
                 </div>
                 <div data-role="fieldcontain">
                     <label for="changePassword">Edit Password: </label>
                     <input type="password" placeholder="New Password" name="changePassword" data-mini="false" id="changePassword" value="" required>
                 </div>
-                <div data-role="fieldcontain">
+                <!--<div data-role="fieldcontain">
                     <label for="txtHealthCardNumber">Health Card Number: </label>
                     <input type="text" placeholder="Health Card Number" name="txtHealthCardNumber" data-mini="false" id="txtHealthCardNumber" value="" required>
                 </div>
-               <!-- <div data-role="fieldcontain">
+                <div data-role="fieldcontain">
                     <label for="slcCancerType" class="select">Cancer Type: </label>
                     <select name="slcCancerType" id="slcCancerType" data-mini="false" data-native-menu="false" required>
             <option>Select Cancer Type</option>
@@ -136,8 +136,8 @@
             <option value="StageA">A: 0.01-0.1 mIU/L</option>
             <option value="StageB">B: 0.1-0.5 mIU/L</option>
             <option value="StageC">C: 0.35-2.0 mIU/L</option>
-          </select>
-                </div> -->
+          </select>-->
+                </div> 
                 <input type="submit" id="btnUserUpdate" data-icon="check" data-iconpos="left" value="Update" data-inline="true">
             </form>
         </div>
@@ -152,10 +152,9 @@
         </div>
         <div data-role="content">
             <div data-role="controlgroup">
-                <a href="#pageUserInfo" data-role="button">User Info</a>
-                <a href="#pageRecords" data-role="button">Records</a>
-                <a href="#pageGraph" data-role="button">Graph</a>
-                <a href="#pageAdvice" data-role="button">Recommendations</a>
+                <a href="#pageUserInfo" data-role="button">Data Entry</a>
+                <a href="#pageRecords" data-role="button">Storage</a>
+               
             </div>
         </div>
     </div>
@@ -163,9 +162,9 @@
     <!-- Records page -->
     <div data-role="page" id="pageRecords">
         <div data-role="header">
-            <a href="#userMenu" data-role="button" data-icon="bars" data-iconpos="left" data-inline="true">Menu</a>
+            <a href="#pageMenu" data-role="button" data-icon="bars" data-iconpos="left" data-inline="true">Menu</a>
             <a href="#pageAbout" data-role="button" data-icon="info" data-iconpos="right" data-inline="true">Info</a>
-            <h1>Records</h1>
+            <h1>Storage</h1>
         </div>
         <div data-role="content">
             <!-- User's Information Section -->
@@ -199,9 +198,9 @@
                         <input type="date" name="datExamDate" data-mini="false" id="datExamDate" value="">
                     </div>
                     <div data-role="fieldcontain">
-                        <label for="txtMGW"><abbr title="Mega Watt Hours">MGW: </abbr>
+                        <label for="txtTSH"><abbr title="Thyroid-stimulating hormone">MGW: </abbr>
             </label>
-                        <input type="number" step="0.01" placeholder="0" name="txtMGW" data-mini="false" id="txtMGW" value="">
+                        <input type="number" step="0.01" placeholder="0" name="txtTSH" data-mini="false" id="txtTSH" value="">
                     </div>
                    <!-- <div data-role="fieldcontain">
                         <label for="txtThyroglobulin">Thyroglobulin (µg/L)[Optional]: </label>
@@ -211,8 +210,8 @@
                         <label for="txtSynthroidDose"><abbr title="Synthroid or Eltroxin">Synthroid*(µg): </abbr>
             </label>
                         <input type="number" step="0.01" placeholder="0" name="txtSynthroidDose" data-mini="false" id="txtSynthroidDose" value="">
-                    </div>
-                </div>-->
+                    </div>-->
+                </div>
                 <input type="submit" id="btnSubmitRecord" value="">
             </form>
         </div>
