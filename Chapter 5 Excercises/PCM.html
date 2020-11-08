@@ -2,7 +2,7 @@
 <html lang=en>
 
 <head>
-    <title>Body Mass Index</title>
+    <title>Power Consumption Monitor</title>
 
     <!--Adjusting the page on mobile screen  -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
@@ -20,7 +20,7 @@
     <!-- Start of first page -->
     <div data-role="page" id="pageHome">
         <div data-role="header">
-            <h1>Body Mass Index</h1>
+            <h1>Power Consumption Monitor</h1>
         </div>
         <div data-role="content">
             Password :
@@ -80,22 +80,24 @@
         <div data-role="header">
             <a href="#pageMenu" data-role="button" data-icon="bars" data-iconpos="left" data-inline="true">Menu</a>
             <a href="#pageAbout" data-role="button" data-icon="info" data-iconpos="right" data-inline="true">Info</a>
-            <h1>User Information</h1>
+            <h1>Plant Information</h1>
         </div>
         <!-- /header -->
         <div data-role="content">
             <form id="frmUserForm" action="">
                 <div data-role="fieldcontain">
-                    <label for="txtFirstName">First Name: </label>
-                    <input type="text" placeholder="First Name" name="txtFirstName" data-mini="false" id="txtFirstName" value="" required>
+                    <label for="txtPlantName">Plant Name: </label>
+                    <input type="text" placeholder="Plant Name" name="txtPlantName" data-mini="false" id="txtPlantName" value="" required>
                 </div>
                 <div data-role="fieldcontain">
-                    <label for="txtLastName">Last Name: </label>
-                    <input type="text" placeholder="Last Name" name="txtLastName" data-mini="false" id="txtLastName" value="" required>
+                    <label for="txtPlantID">Plant ID: </label>
+                    <input type="text" placeholder="Plant ID" name="txtPlantID" data-mini="false" id="txtPlantID" value="" required>
                 </div>
+
+                <!--Changed "datBirthdate" to "dateInstallation-->
                 <div data-role="fieldcontain">
-                    <label for="datBirthdate">Birthdate: </label>
-                    <input type="date" name="datBirthdate" data-mini="false" id="datBirthdate" value="" required>
+                    <label for="dateInstallation">Date Installation: </label>
+                    <input type="date" name="dateInstallation" data-mini="false" id="dateInstallation" value="" required>
                 </div>
                 <div data-role="fieldcontain">
                     <label for="changePassword">Edit Password: </label>
@@ -105,7 +107,7 @@
                     <label for="txtHealthCardNumber">Health Card Number: </label>
                     <input type="text" placeholder="Health Card Number" name="txtHealthCardNumber" data-mini="false" id="txtHealthCardNumber" value="" required>
                 </div>
-                <div data-role="fieldcontain">
+               <!-- <div data-role="fieldcontain">
                     <label for="slcCancerType" class="select">Cancer Type: </label>
                     <select name="slcCancerType" id="slcCancerType" data-mini="false" data-native-menu="false" required>
             <option>Select Cancer Type</option>
@@ -124,8 +126,8 @@
             <option value="StageThree">Stage III</option>
             <option value="StageFour">Stage IV</option>
           </select>
-                </div>
-                <div data-role="fieldcontain">
+                </div> -->
+               <!-- <div data-role="fieldcontain">
                     <label for="slcTSHRange" class="select">Target TSH Range: </label>
                     <select name="slcTSHRange" id="slcTSHRange" data-mini="false" data-native-menu="false" required>
             <option>Select TSH Range</option>
@@ -133,7 +135,7 @@
             <option value="StageB">B: 0.1-0.5 mIU/L</option>
             <option value="StageC">C: 0.35-2.0 mIU/L</option>
           </select>
-                </div>
+                </div> -->
                 <input type="submit" id="btnUserUpdate" data-icon="check" data-iconpos="left" value="Update" data-inline="true">
             </form>
         </div>
@@ -144,7 +146,7 @@
         <div data-role="header">
             <a href="#pageMenu" data-role="button" data-icon="bars" data-iconpos="left" data-inline="true">Menu</a>
             <a href="#pageAbout" data-role="button" data-icon="info" data-iconpos="right" data-inline="true">Info</a>
-            <h1>Thyroid Cancer Aide</h1>
+            <h1>Power Consumption Monitor</h1>
         </div>
         <div data-role="content">
             <div data-role="controlgroup">
@@ -159,7 +161,7 @@
     <!-- Records page -->
     <div data-role="page" id="pageRecords">
         <div data-role="header">
-            <a href="#pageMenu" data-role="button" data-icon="bars" data-iconpos="left" data-inline="true">Menu</a>
+            <a href="#userMenu" data-role="button" data-icon="bars" data-iconpos="left" data-inline="true">Menu</a>
             <a href="#pageAbout" data-role="button" data-icon="info" data-iconpos="right" data-inline="true">Info</a>
             <h1>Records</h1>
         </div>
@@ -195,24 +197,24 @@
                         <input type="date" name="datExamDate" data-mini="false" id="datExamDate" value="">
                     </div>
                     <div data-role="fieldcontain">
-                        <label for="txtTSH"><abbr title="Thyroid-stimulating hormone">TSH (mIU/L): </abbr>
+                        <label for="txtMGW"><abbr title="Mega Watt Hours">MGW: </abbr>
             </label>
-                        <input type="number" step="0.01" placeholder="0" name="txtTSH" data-mini="false" id="txtTSH" value="">
+                        <input type="number" step="0.01" placeholder="0" name="txtMGW" data-mini="false" id="txtMGW" value="">
                     </div>
-                    <div data-role="fieldcontain">
+                   <!-- <div data-role="fieldcontain">
                         <label for="txtThyroglobulin">Thyroglobulin (µg/L)[Optional]: </label>
                         <input type="number" step="0.01" placeholder="0" name="txtThyroglobulin" data-mini="false" id="txtThyroglobulin" value="">
-                    </div>
-                    <div data-role="fieldcontain">
+                    </div> -->
+                    <!--<div data-role="fieldcontain">
                         <label for="txtSynthroidDose"><abbr title="Synthroid or Eltroxin">Synthroid*(µg): </abbr>
             </label>
                         <input type="number" step="0.01" placeholder="0" name="txtSynthroidDose" data-mini="false" id="txtSynthroidDose" value="">
                     </div>
-                </div>
+                </div>-->
                 <input type="submit" id="btnSubmitRecord" value="">
             </form>
         </div>
-        <p>&nbsp;&nbsp;100 microgram = .0001 gram</p>
+        <!--<p>&nbsp;&nbsp;100 microgram = .0001 gram</p>-->
     </div>
 
 
